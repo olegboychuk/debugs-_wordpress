@@ -31,3 +31,8 @@ RewriteRule . /index.php [L]
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*) https://%{SERVER_NAME}/$1 [R,L]
 </IfModule>
+
+#X-Frame-Options header is included in the HTTP response to protect against 'ClickJacking' attacks. 
+Header set X-Frame-Options SAMEORIGIN
+
+Header set X-Frame-Options SAMEORIGIN
